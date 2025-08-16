@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+class Solution {
+public:
+    int maximum69Number(int num) {
+        string s = to_string(num);
+        string::size_type pos = s.find('6');
+        if (pos != string::npos) {
+            s[pos] = '9';
+        }
+        return stoi(s);
+    }
+};
