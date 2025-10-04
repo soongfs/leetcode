@@ -4,6 +4,7 @@ using namespace std;
 
 class Solution {
 public:
+    // 递归
     // int rob(vector<int> &nums) {
     //     int n = nums.size();
     //     vector<int> memo(n, -1);
@@ -17,6 +18,7 @@ public:
     //     return dfs(n - 1);
     // }
 
+    // 递推
     // int rob(vector<int> &nums) {
     //     int n = nums.size();
     //     if (n == 1) {
@@ -31,6 +33,7 @@ public:
     //     return f[n - 1];
     // }
 
+    // 优化空间
     int rob(vector<int> &nums) {
         int f0 = 0, f1 = 0;
         for (int x : nums) {
