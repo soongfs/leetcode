@@ -5,14 +5,10 @@ using namespace std;
 class Solution {
 public:
     int maxArea(vector<int> &height) {
-        int mx = height[0], mx_i = 0;
-        int ans = 0;
-        for (int i = 1; i < height.size(); i++) {
-            ans = max(ans, (i - mx_i) * min(mx, height[i]));
-            if (height[i] > mx) {
-                mx = height[i];
-                mx_i = i;
-            }
+        int ans = 0, i = 0, j = height.size() - 1;
+        while (i < j) {
+            ans = max(ans, (j - i) * min(height[i], height[j]));
+            height[i] < height[j] ? i++ : j--;
         }
         return ans;
     }

@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++: build (g++)",
+            "type": "shell",
+            "command": "bash",
+            "args": [
+                "-lc",
+                "mkdir -p bin && g++ -std=c++23 -g -O0 ${file} -o bin/app"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always"
+            }
+        }
+    ]
+}
